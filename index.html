@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie</title>
+    <style>
+        h1 {
+            font-size: 40px;
+        }
+        h2 {
+            font-size: 16px;
+            margin-bottom: 40px;
+        }
+        ol {
+            padding: 0;
+        }
+        li {
+            cursor: pointer;
+        }
+        * {
+            box-sizing: border-box;
+            width: 100%;
+            margin: 5px;
+        }
+        .modul {
+            width: 30%;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid gray;
+            display: inline-grid;
+            background-color: pink;
+            border-radius: 15px;
+        }
+        .gruby-tekst {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kalkulator BMI</h1>
+    <!-- Moduł pierwszy-->
+    <div class="modul">
+        <h2>Wprowadź dane:</h2>
+        Waga: <input type="number" name="waga" id="waga">
+        Wzrost: <input type="number" name="wzrost" id="wzrost">
+        <button id="zatwierdz" onclick="sprawdzDane()">Zatwierdź</button>
+        <div id="blad"></div>
+    </div>
+
+    <!-- Moduł wyników -->
+    <div class="modul">
+        <h2>Aktualny wynik:</h2>
+        Waga: <div id="pobrana-waga"></div>
+        Wzrost: <div id="pobrany-wzrost"></div>
+        BMI: <div class="gruby-tekst" id="obliczone-bmi"></div>
+        <div id="wniosek"></div>
+    </div>
+
+    <!-- Moduł historii -->
+    <div class="modul">
+        <h2>Historia pomiarów:</h2>
+        <ol id="historia-pomiarow" onclick="wybranoPomiar(event)">
+
+        </ol>
+        Średnia z BMI: <div id="srednia"></div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
